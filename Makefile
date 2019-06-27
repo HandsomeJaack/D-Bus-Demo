@@ -6,7 +6,7 @@ SOURCES=demo.cpp imgui.cpp imgui_demo.cpp imgui_draw.cpp imgui_impl_opengl2.cpp 
 OBJECTS=$(SOURCES:.cpp=.cpp.o)
 EXECUTABLE=demo
 
-all: $(EXECUTABLE) daemon db_api.so
+all: $(EXECUTABLE) daemon libdb_api.so
 
 $(EXECUTABLE): $(OBJECTS) libdb_api.so
 	$(CXX) $(OBJECTS) $(LDFLAGS)  -o $@
