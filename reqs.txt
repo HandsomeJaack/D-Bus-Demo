@@ -1,0 +1,3 @@
+dbus
+libsystemd-dev
+libsqlite3-dev
