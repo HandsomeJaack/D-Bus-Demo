@@ -8,23 +8,23 @@
 
 С демоном можно общаться через терменил посредством команды 
 
-	```bash 
-	busctl --user call net.handsome.Daemon /net/handsome/Daemon net.handsome.Daemon <имя_метода> <тип_входных_параметров> <входные параметры>
-	```
+```bash 
+busctl --user call net.handsome.Daemon /net/handsome/Daemon net.handsome.Daemon <имя_метода> <тип_входных_параметров> <входные параметры>
+```
 
 Например, для добавления записи в базу данных:
 	
-	```bash
-	busctl --user call net.handsome.Daemon /net/handsome/Daemon net.handsome.Daemon Add ss /usr/bin/gedit .cpp
-	```
+```bash
+busctl --user call net.handsome.Daemon /net/handsome/Daemon net.handsome.Daemon Add ss /usr/bin/gedit .cpp
+```
 
 **Внимание!** Добавление в базу происходит строго по одному формату за команду!
 
 Удаление из базы:
 	
-	```bash
-	busctl --user call net.handsome.Daemon /net/handsome/Daemon net.handsome.Daemon Delete s /usr/bin/gedit
-	```
+```bash
+busctl --user call net.handsome.Daemon /net/handsome/Daemon net.handsome.Daemon Delete s /usr/bin/gedit
+```
 
 Удаляет все вхождения программы в базу.
 
