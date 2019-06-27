@@ -1,10 +1,6 @@
 # Инструкция по сборке
 
-Ставим все зависимости, описанные в ```reqs.txt``` при помощи команды
-
-	```sudo xargs apt install <reqs.txt```
-
-Далее делаем ```make```
+Ставим все зависимости, описанные в ```reqs.txt```. Далее делаем ```make```
 
 В фоне запускаем ```./daemon &``` и запускаем демо-приложение ```./demo```. Чтобы проверить работу демки, перетащите файл с необходимым расширением в окно, в нем появятся кнопки с программами, нажав на них, файл откроется в соответсвующей программе.
 
@@ -12,17 +8,17 @@
 
 С демоном можно общаться через терменил посредством команды 
 
-	```busctl --user call net.handsome.Daemon /net/handsome/Daemon net.handsome.Daemon <имя_метода> <тип_входных_параметров> <входные параметры>```
+	```bash busctl --user call net.handsome.Daemon /net/handsome/Daemon net.handsome.Daemon <имя_метода> <тип_входных_параметров> <входные параметры>```
 
 Например, для добавления записи в базу данных:
 	
-	```busctl --user call net.handsome.Daemon /net/handsome/Daemon net.handsome.Daemon Add ss /usr/bin/gedit .cpp```
+	```bash busctl --user call net.handsome.Daemon /net/handsome/Daemon net.handsome.Daemon Add ss /usr/bin/gedit .cpp```
 
 **Внимание!** Добавление в базу происходит строго по одному формату за команду!
 
 Удаление из базы:
 	
-	```busctl --user call net.handsome.Daemon /net/handsome/Daemon net.handsome.Daemon Delete s /usr/bin/gedit```
+	```bash busctl --user call net.handsome.Daemon /net/handsome/Daemon net.handsome.Daemon Delete s /usr/bin/gedit```
 
 Удаляет все вхождения программы в базу.
 
