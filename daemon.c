@@ -138,7 +138,7 @@ static int method_variants(sd_bus_message *m, void *userdata,
     return r;
   }
 
-  char *format = strchr(
+  char *format = strrchr(
       file, '.'); /* Detachment of necessary extension from full file name */
   sqlite3 *db;
   sqlite3_stmt *res;
