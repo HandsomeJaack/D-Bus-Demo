@@ -120,13 +120,6 @@ finish:
   sd_bus_error_free(&error);
   sd_bus_message_unref(m);
   sd_bus_unref(bus);
-  /* Clear memory */
-  char **ptr = list;
-  while (*ptr) {
-    free(*ptr++);
-  }
-  free(list);
-
   return list;
 }
 

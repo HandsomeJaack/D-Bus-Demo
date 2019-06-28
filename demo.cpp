@@ -7,6 +7,8 @@
 #include "imgui.h"
 #include "imgui_impl_opengl2.h"
 #include "imgui_impl_sdl.h"
+#include <iostream>
+#include <X11/Xlib.h>
 
 int main(int, char**) {
   // Setup SDL
