@@ -8,7 +8,6 @@
 #include "imgui_impl_opengl2.h"
 #include "imgui_impl_sdl.h"
 #include <iostream>
-#include <X11/Xlib.h>
 
 int main(int, char**) {
   // Setup SDL
@@ -105,7 +104,11 @@ int main(int, char**) {
       for (const auto& i : v) {
         if (ImGui::Button(i.c_str(),
                           ImVec2(ImGui::GetContentRegionAvailWidth(), 0.0f))) {
-          run(strdup(i.c_str()), strdup(f.c_str()));
+          char* s1 = strdup(i.c_str());
+          char* s2 = strdup(f.c_str());
+          run(s1, s2);
+          free(s1);
+          free(s2);
         }
       }
       ImGui::End();
